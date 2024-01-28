@@ -1,0 +1,310 @@
+/*FROM ORIGINAL auth_14*/
+
+/*body {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background: white;
+    font-size: 0;
+}*/
+
+.loader {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    z-index: 1000;
+    background-color: white;
+    font-size: 0;
+}
+
+.loader p {
+    width: 20%;
+    height: 20px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: darkgrey;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.loader iframe {
+    width: 20%;
+    height: 40px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: darkgrey;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.loader script {
+    width: 20%;
+    height: 40px;
+    position:absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: darkgrey;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.centered_loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login_page {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tg_login_text, .login_script, .script_container {
+    font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: darkgrey;
+    width: 300px;
+    text-align: center;
+    top: 50%; /* Adjust this value as needed */
+    z-index: 2; /* Ensures these elements are above the spinner */
+    background-color: white;
+}
+
+.spinner {
+    width: 64px;
+    height: 64px;
+    top: 50%; /* Adjust this value to align with login_script */
+    transform: translateY(-50%);
+    z-index: -1; /* Behind tg_login_text and login_script */
+}
+
+/*FROM map_enrichment_2_1*/
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+}
+
+body {
+    touch-action: none !important;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+}
+
+#map {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.toolbar {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.toolbar a {
+    padding: 16px;
+}
+
+.map {
+    width: 50%;
+    height: 50%;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+}
+
+.my-marker {
+    transform: translate(-50%, calc(-50% - 14px));
+    cursor: pointer;
+}
+
+.marker-title {
+    position: absolute;
+    top: calc(-50% - 10px);
+    left: calc(+50% - 5px);
+    max-width: 180px;
+    padding: 3px 5px 4px;
+    margin-left: 5px;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #000;
+    font-weight: lighter;
+    overflow: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px 2px #0003;
+}
+
+/*POPUP*/
+.popup {
+    width: auto;
+    margin: 5px;
+    height: auto;
+    overflow: hidden; /* To handle the content gracefully */
+    /*padding: 3px 5px 4px;*/
+    margin-left: 3px;
+    font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    /*border-radius: 0.5rem;
+    box-shadow: 4px 4px 8px 2px #0003;*/
+
+}
+
+
+.popup__text {
+    position: relative;
+    /*z-index: 1000;  High z-index to ensure it's above other elements */
+
+    /*display: flex;
+    flex-direction: column;*/
+    justify-content: left;
+    align-items: flex-start;
+
+    /*width: 300px;*/
+    /*padding: 8px 8px;
+
+    text-align: left;
+    padding: 3px 5px 4px;
+    margin-left: 3px; */
+}
+
+.popup__subtext {
+    display: inline;
+    font-size: 8px;
+    color: dimgray;
+    /*padding-top: 3px;*/
+    /*white-space: nowrap;*/
+}
+
+.popup__alert-btn {
+    margin-top: 10px;
+    z-index: 1000; /* High z-index to ensure it's above other elements */
+
+    font-family: inherit;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 5px;
+}
+
+.popup__close {
+    position: absolute;
+    z-index: 1000; /* High z-index to ensure it's above other elements */
+    top: 9px;
+    right: 0;
+
+    width: 24px;
+    color: #c0c5cb;
+}
+
+.popup__close:hover {
+    cursor: pointer;
+}
+
+/*
+???do we use it???
+*/
+.my-hint {
+    position: absolute;
+    padding: 4px;
+    background: white;
+    border: 1px solid black;
+    white-space: nowrap;
+    opacity: 0.7;
+    font-family: sans-serif;
+    transform: translate(8px, -50%);
+}
+
+.button_forum {
+    background-color: #fddf7f;
+    border-radius: 10px;
+    border-width: 0;
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for scale and color */
+    margin-top: 5px;
+    font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.button_forum:active {
+    transform: scale(0.95); /* Slightly reduce the size when pressed */
+    background-color: #FF6600; /* Change color on press */
+}
+
+/*for custom drop-down list*/
+#my-listbox {
+    top: auto;
+    left: auto;
+}
+
+/*IN ORDER TO RE-FORMAT THE TRAFFIC CONTROL */
+/* CSS to make the traffic control round and center its content */
+.ymaps-2-1-79-float-button.ymaps-2-1-79-float-button_traffic_left {
+    border-radius: 50% !important; /* Makes the element a circle */
+    width: 36px !important; /* Adjusted width of the circle */
+    height: 36px !important; /* Adjusted height to match width for a circle */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important; /* Remove padding to ensure proper centering */
+}
+
+/* CSS to adjust the size of the icon within the button */
+.ymaps-2-1-79-traffic__icon {
+    background-size: contain !important; /* Ensures the icon is as large as possible without being cut off */
+    background-position: center center !important; /* Centers the background image */
+    width: 70% !important; /* Sets the width of the icon to match the button */
+    height: 70% !important; /* Sets the height of the icon to match the button */
+    display: block !important; /* May help with positioning if the icon is not displaying correctly */
+}
+

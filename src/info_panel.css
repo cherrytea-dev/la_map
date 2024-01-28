@@ -1,0 +1,66 @@
+.container-for-info-panel {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    z-index: 3500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px);
+}
+
+.info-panel {
+    background-color: white;
+    width: calc(100% - 40px);
+    max-height: calc(100% - 40px); /* Set a max-height instead of a fixed height */
+    border-radius: 20px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto; /* Adds vertical scroll if content exceeds max-height */
+}
+
+.info-panel-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.info-panel-title {
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.info-panel-content {
+    font-size: 16px;
+}
+
+.img-desc-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 60px auto; /* First column for image, second for description */
+    align-items: center; /* Aligns items to the top */
+    gap: 10px; /* Space between image and description */
+    margin-bottom: 15px; /* Adds space between the image/description pairs */
+}
+
+.img-container {
+    width: 100%; /* Use 100% of the grid column */
+    display: flex;
+    justify-content: center; /* Centers image in the column */
+    align-items: center; /* Aligns image vertically in the center */
+}
+
+.img-desc-container img {
+    display: block; /* Remove max-width and max-height constraints */
+    max-height: 50px; /* Keep the height constraint if desired */
+}
+
+.description {
+    /* No need for flex-grow, as the grid layout controls the sizing */
+}
