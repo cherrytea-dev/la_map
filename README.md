@@ -18,7 +18,7 @@ numerous "field" searches in urban / rural / natural environments.
 ## Contribution
 
 See a dedicated LA Searcher Bot 
-[contribution page](https://github.com/Mikkdrasil/la_searcher_bot/blob/main/CONTRIBUTING.md).
+[contribution page](https://github.com/cherrytea-dev/la_searcher_map/blob/main/CONTRIBUTING.md).
 
 
 
