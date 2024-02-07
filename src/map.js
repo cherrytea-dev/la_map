@@ -880,7 +880,7 @@ function addMarker(record) {
     let preset;
     if (record.search_is_old) {
         preset = 'islands#grayIcon'
-    } else if (record.exact_coords) {
+    } else if (record.exact_coords && record.search_status !== 'СТОП') {
         preset = 'islands#greenStretchyIcon'
     } else {
         preset = 'islands#orangeStretchyIcon'

@@ -133,10 +133,10 @@ function loadTelegramLoginScript() {
             let tgLoginText = document.createElement('div');
             tgLoginText.id = 'tg_login_text'
             tgLoginText.className = 'tg_login_text centered'
-            tgLoginText.innerHTML = 'Привет, сервис работает только для существующих пользвателей ' +
-                '<a href="https://t.me/LizaAlert_Searcher_Bot">Бота Поисковика ЛА</a>. Чтобы начать ' +
-                'пользоваться сервисом, зарегистрируйтесь в Боте, а потом заходите в этот сервис ' +
-                'и в пару кликов пройдите аутентификацию.<br><br>'
+            tgLoginText.innerHTML = 'Сервис "Карта Поисковика ЛизаАлерт" работает при аутентификации через Telegram. ' +
+                'Если вы являетесь пользователем <a href="https://t.me/LizaAlert_Searcher_Bot">Бота Поисковика ЛА</a>' +
+                ', Карта будет отображать поиски в соответствии с вашими настройками бота. Если нет – карта покажет ' +
+                'текущие поиски в Московском регионе.<br><br>'
             tgLoginText.setAttribute('class', 'tg_login_text')
             if (userTheme === 'dark') {
                 tgLoginText.style.background = 'black'
